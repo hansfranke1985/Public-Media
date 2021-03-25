@@ -13074,15 +13074,21 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Individual-Assigment-2:">Individual Assigment 2:<a class="anchor-link" href="#Individual-Assigment-2:">&#182;</a></h1><h2 id="Public-Media:-Recommender-Systems-and-User`s-Interface">Public Media: Recommender Systems and User`s Interface<a class="anchor-link" href="#Public-Media:-Recommender-Systems-and-User`s-Interface">&#182;</a></h2><p>March/2021</p>
+<p>Hans Alberto Franke - 6987680</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#import functions from recommender.py</span>
-<span class="kn">from</span> <span class="nn">Recommender</span> <span class="kn">import</span> <span class="n">all_functions</span> <span class="c1">#All the functions are described there, just to make the notebook cleaner!</span>
-
-<span class="c1">#load datasets: Small version!</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#load datasets: Small version!</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">movies_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ml-small/movies.csv&#39;</span><span class="p">)</span>
@@ -13254,7 +13260,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Look for datatypes and look for missing values, seems no missing value!</span>
+<span class="n">full_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13777,179 +13784,6 @@ memory usage: 14.2+ MB
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_df</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>movieId</th>
-      <th>title</th>
-      <th>genres</th>
-      <th>userId</th>
-      <th>rating</th>
-      <th>timestamp</th>
-      <th>tag</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>Toy Story (1995)</td>
-      <td>Adventure|Animation|Children|Comedy|Fantasy</td>
-      <td>1</td>
-      <td>4.0</td>
-      <td>964982703</td>
-      <td>pixar</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>Toy Story (1995)</td>
-      <td>Adventure|Animation|Children|Comedy|Fantasy</td>
-      <td>1</td>
-      <td>4.0</td>
-      <td>964982703</td>
-      <td>pixar</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1</td>
-      <td>Toy Story (1995)</td>
-      <td>Adventure|Animation|Children|Comedy|Fantasy</td>
-      <td>1</td>
-      <td>4.0</td>
-      <td>964982703</td>
-      <td>fun</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>Toy Story (1995)</td>
-      <td>Adventure|Animation|Children|Comedy|Fantasy</td>
-      <td>5</td>
-      <td>4.0</td>
-      <td>847434962</td>
-      <td>pixar</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1</td>
-      <td>Toy Story (1995)</td>
-      <td>Adventure|Animation|Children|Comedy|Fantasy</td>
-      <td>5</td>
-      <td>4.0</td>
-      <td>847434962</td>
-      <td>pixar</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>233208</th>
-      <td>187595</td>
-      <td>Solo: A Star Wars Story (2018)</td>
-      <td>Action|Adventure|Children|Sci-Fi</td>
-      <td>586</td>
-      <td>5.0</td>
-      <td>1529899556</td>
-      <td>star wars</td>
-    </tr>
-    <tr>
-      <th>233209</th>
-      <td>193565</td>
-      <td>Gintama: The Movie (2010)</td>
-      <td>Action|Animation|Comedy|Sci-Fi</td>
-      <td>184</td>
-      <td>3.5</td>
-      <td>1537098554</td>
-      <td>anime</td>
-    </tr>
-    <tr>
-      <th>233210</th>
-      <td>193565</td>
-      <td>Gintama: The Movie (2010)</td>
-      <td>Action|Animation|Comedy|Sci-Fi</td>
-      <td>184</td>
-      <td>3.5</td>
-      <td>1537098554</td>
-      <td>comedy</td>
-    </tr>
-    <tr>
-      <th>233211</th>
-      <td>193565</td>
-      <td>Gintama: The Movie (2010)</td>
-      <td>Action|Animation|Comedy|Sci-Fi</td>
-      <td>184</td>
-      <td>3.5</td>
-      <td>1537098554</td>
-      <td>gintama</td>
-    </tr>
-    <tr>
-      <th>233212</th>
-      <td>193565</td>
-      <td>Gintama: The Movie (2010)</td>
-      <td>Action|Animation|Comedy|Sci-Fi</td>
-      <td>184</td>
-      <td>3.5</td>
-      <td>1537098554</td>
-      <td>remaster</td>
-    </tr>
-  </tbody>
-</table>
-<p>233213 rows × 7 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13959,7 +13793,7 @@ memory usage: 14.2+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Capture trend users: It is useful to look for trend users to suggest movies that are trending of heavy users!</span>
@@ -13982,7 +13816,7 @@ memory usage: 14.2+ MB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -14096,7 +13930,7 @@ items and user profile for recommendations.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Based-on-what-you-had-watched...">Based on what you had watched...<a class="anchor-link" href="#Based-on-what-you-had-watched...">&#182;</a></h2>
+<h2 id="Based-on-what-you-have-watched...">Based on what you have watched...<a class="anchor-link" href="#Based-on-what-you-have-watched...">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14109,7 +13943,7 @@ items and user profile for recommendations.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#pairwise similarities: Recommend a movie based on similaritie to another movie, the similaritie is the number of &quot;ratings&quot; of a user that watched a movie_a to movie_b</span>
@@ -14156,7 +13990,7 @@ items and user profile for recommendations.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -14265,7 +14099,7 @@ items and user profile for recommendations.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#test some recommendation based of ocurrance</span>
@@ -14312,7 +14146,7 @@ Numbers of votes to be in final list: 19.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -14404,7 +14238,7 @@ Numbers of votes to be in final list: 19.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># let&#39;s make a crosstab (Movies x Users)</span>
@@ -14422,7 +14256,7 @@ Numbers of votes to be in final list: 19.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -14771,7 +14605,7 @@ Numbers of votes to be in final list: 19.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">movies_category_users</span><span class="o">.</span><span class="n">shape</span>
@@ -14787,7 +14621,7 @@ Numbers of votes to be in final list: 19.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -14804,11 +14638,10 @@ Numbers of votes to be in final list: 19.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Create a function to use Jaccard Similarity </span>
-
 <span class="k">def</span> <span class="nf">get_dist_jaccard</span><span class="p">(</span><span class="n">df_crosstab</span><span class="p">):</span>
     <span class="c1"># import necessary stuff</span>
     <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">jaccard_score</span>
@@ -14844,7 +14677,7 @@ Numbers of votes to be in final list: 19.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -15193,7 +15026,7 @@ Numbers of votes to be in final list: 19.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Recommend movies based on Movie title</span>
@@ -15213,7 +15046,7 @@ Numbers of votes to be in final list: 19.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -15247,7 +15080,7 @@ Name: Zoolander (2001), dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#select a subset of fields only</span>
@@ -15315,7 +15148,7 @@ Name: Zoolander (2001), dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">full_df</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">film_name</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -15331,13 +15164,13 @@ Name: Zoolander (2001), dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;101 Dalmatians (1996)&#39;</pre>
+<pre>&#39;Star Wars: Episode IV - A New Hope (1977)&#39;</pre>
 </div>
 
 </div>
@@ -15348,7 +15181,7 @@ Name: Zoolander (2001), dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Recommend 10 movies based on movie tag&#39;s of that film name</span>
@@ -15388,7 +15221,7 @@ Name: Zoolander (2001), dtype: float64</pre>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-20-465f68dabd06&gt;:52: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-15-465f68dabd06&gt;:52: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -15400,7 +15233,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -15524,7 +15357,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#maybe filter some genres before?? </span>
@@ -15569,7 +15402,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-20-465f68dabd06&gt;:52: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-15-465f68dabd06&gt;:52: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -15581,7 +15414,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -15707,15 +15540,15 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Collaborative-Filtering">Collaborative Filtering<a class="anchor-link" href="#Collaborative-Filtering">&#182;</a></h1><p>Collaborative Filtering evaluates products using users’ ratings (explicit or implicit) from historical
-data [16]. It works by developing a database of the user’s preferences for items. Active users
+data. It works by developing a database of the user’s preferences for items. Active users
 will be mapped against this database to reveal the active user’s neighbors with similar purchase
 preferences. Collaborative filtering techniques are classified into item-based filtering and user-based
-filtering [17]. User-based techniques go through two main stages to forecast items’ ratings for a specific
+filtering . User-based techniques go through two main stages to forecast items’ ratings for a specific
 user. The first stage locates similar users to the target user. The second stage obtains rates from
 similar users to the active user, then using them to produce recommendations. There have been many
 collaborative filtering algorithm measures that calculate the similarities among users. The commonly
-used similarity measures in the literature include mean-squared dierence, Pearson correlation, cosine
-similarity, Spearman correlation, and adjusted cosine similarity [18,19]. Collaborative filtering is the
+used similarity measures in the literature include mean-squared diference, Pearson correlation, cosine
+similarity, Spearman correlation, and adjusted cosine similarity. Collaborative filtering is the
 commonly used choice for RSs, and it does not require domain knowledge because the embeddings
 are automatically learned. Embedding of items in a recommender system refers to mapping items to a
 sequence of numbers. This way of representing items with learned vectors, is used to train algorithms
@@ -15724,8 +15557,7 @@ filtering is that it generates models that help users discover new interests. Fi
 filtering is a great starting point for other RSs, as the RS only requires the rating matrix R to develop a
 factorization model. The rating matrix R is a two-dimensional matrix of n users and m items; each
 entry in this matrix, rij represents the rating provided of user i to item j. Although being favorable in
-many aspects, collaborative filtering has several disadvantages, such as the cold-start problem, which
-we will elaborate on in Section 3.1 of this paper.</p>
+many aspects, collaborative filtering has several disadvantages, such as the cold-start problem.</p>
 
 </div>
 </div>
@@ -15747,7 +15579,7 @@ we will elaborate on in Section 3.1 of this paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">surprise</span> <span class="kn">import</span> <span class="n">Reader</span><span class="p">,</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">SVD</span>
@@ -15779,46 +15611,46 @@ we will elaborate on in Section 3.1 of this paper.</p>
 <pre>Evaluating RMSE, MAE of algorithm SVD on 10 split(s).
 
                   Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Fold 6  Fold 7  Fold 8  Fold 9  Fold 10 Mean    Std     
-RMSE (testset)    0.8766  0.8665  0.8687  0.8735  0.8699  0.8727  0.8620  0.8765  0.8545  0.8610  0.8682  0.0069  
-MAE (testset)     0.6753  0.6637  0.6679  0.6690  0.6660  0.6701  0.6647  0.6721  0.6572  0.6603  0.6666  0.0052  
-Fit time          4.31    4.53    4.66    4.35    4.34    4.24    4.43    4.47    4.44    4.31    4.41    0.12    
-Test time         0.07    0.05    0.06    0.05    0.05    0.05    0.06    0.06    0.06    0.05    0.06    0.01    
+RMSE (testset)    0.8750  0.8670  0.8763  0.8837  0.8592  0.8705  0.8474  0.8750  0.8746  0.8709  0.8700  0.0097  
+MAE (testset)     0.6698  0.6693  0.6763  0.6777  0.6604  0.6684  0.6530  0.6680  0.6687  0.6674  0.6679  0.0067  
+Fit time          4.20    4.12    4.10    4.06    4.06    4.09    4.07    4.07    4.12    4.06    4.09    0.04    
+Test time         0.06    0.05    0.05    0.05    0.05    0.05    0.05    0.05    0.05    0.05    0.05    0.00    
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;test_rmse&#39;: array([0.87656198, 0.86652811, 0.86874125, 0.87354825, 0.8698535 ,
-        0.87268968, 0.86203239, 0.87649236, 0.85450876, 0.86097932]),
- &#39;test_mae&#39;: array([0.6753289 , 0.66374251, 0.66793702, 0.66902186, 0.66601605,
-        0.67009541, 0.66468435, 0.67206153, 0.65721329, 0.66025303]),
- &#39;fit_time&#39;: (4.3136796951293945,
-  4.528290510177612,
-  4.655590057373047,
-  4.351368188858032,
-  4.339369535446167,
-  4.239668130874634,
-  4.431128740310669,
-  4.474040269851685,
-  4.439164638519287,
-  4.311473608016968),
- &#39;test_time&#39;: (0.07308053970336914,
-  0.05186104774475098,
-  0.058806657791137695,
-  0.052857398986816406,
-  0.053874969482421875,
-  0.052857398986816406,
-  0.06183481216430664,
-  0.05585050582885742,
-  0.05684781074523926,
-  0.05186152458190918)}</pre>
+<pre>{&#39;test_rmse&#39;: array([0.87500159, 0.86704801, 0.87625478, 0.88373477, 0.85921199,
+        0.87050787, 0.84743383, 0.87499545, 0.87461786, 0.87094092]),
+ &#39;test_mae&#39;: array([0.66980943, 0.66929637, 0.67633276, 0.67767547, 0.66043573,
+        0.66841185, 0.65296505, 0.66804359, 0.66874108, 0.66741903]),
+ &#39;fit_time&#39;: (4.203945159912109,
+  4.122848749160767,
+  4.09679102897644,
+  4.05826997756958,
+  4.06103515625,
+  4.089223623275757,
+  4.067336082458496,
+  4.065874814987183,
+  4.119046449661255,
+  4.055288314819336),
+ &#39;test_time&#39;: (0.06482625007629395,
+  0.04986381530761719,
+  0.04883837699890137,
+  0.04803752899169922,
+  0.05004310607910156,
+  0.053365468978881836,
+  0.05286121368408203,
+  0.04989337921142578,
+  0.047865867614746094,
+  0.05204057693481445)}</pre>
 </div>
 
 </div>
@@ -15829,7 +15661,7 @@ Test time         0.07    0.05    0.06    0.05    0.05    0.05    0.06    0.06  
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#improve parameters with grid search</span>
@@ -15860,7 +15692,7 @@ Test time         0.07    0.05    0.06    0.05    0.05    0.05    0.06    0.06  
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.8929082207512536
+<pre>0.8937508069087944
 {&#39;n_epochs&#39;: 10, &#39;lr_all&#39;: 0.005, &#39;reg_all&#39;: 0.4}
 </pre>
 </div>
@@ -15872,7 +15704,7 @@ Test time         0.07    0.05    0.06    0.05    0.05    0.05    0.06    0.06  
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Training using the best estimator</span>
@@ -15890,13 +15722,13 @@ Test time         0.07    0.05    0.06    0.05    0.05    0.05    0.06    0.06  
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;surprise.prediction_algorithms.matrix_factorization.SVD at 0x1a4d5433760&gt;</pre>
+<pre>&lt;surprise.prediction_algorithms.matrix_factorization.SVD at 0x2e314c76160&gt;</pre>
 </div>
 
 </div>
@@ -15907,7 +15739,7 @@ Test time         0.07    0.05    0.06    0.05    0.05    0.05    0.06    0.06  
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Look for movies that a user has watched</span>
@@ -15941,7 +15773,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -16050,7 +15882,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#test our algorithm</span>
@@ -16067,58 +15899,17 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Prediction(uid=474, iid=2, r_ui=None, est=3.573709773825441, details={&#39;was_impossible&#39;: False})</pre>
+<pre>Prediction(uid=474, iid=2, r_ui=None, est=3.5741258613710842, details={&#39;was_impossible&#39;: False})</pre>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Similar users (distance from users based on Genres)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Similar Genres</span>
-<span class="c1">#Similar users (distance from item_a x item_b occurancy)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Similar Movies</span>
-<span class="c1">#Similar users (distance from item_a x item_b occurancy)</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -16139,6 +15930,1545 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Select Similar Users/Friends</span>
+<span class="n">target_user</span> <span class="o">=</span> <span class="mi">474</span>
+
+<span class="k">def</span> <span class="nf">similar_users</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+<span class="c1"># let&#39;s make a crosstab (Movies x Users)</span>
+<span class="n">movies_category_users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">full_df_genres</span><span class="p">[</span><span class="s1">&#39;userId&#39;</span><span class="p">],</span> <span class="n">full_df_genres</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">])</span>
+<span class="n">movies_category_users</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[37]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>title</th>
+      <th>(500) Days of Summer (2009)</th>
+      <th>...And Justice for All (1979)</th>
+      <th>10 Cloverfield Lane (2016)</th>
+      <th>10 Things I Hate About You (1999)</th>
+      <th>101 Dalmatians (1996)</th>
+      <th>101 Dalmatians (One Hundred and One Dalmatians) (1961)</th>
+      <th>11'09"01 - September 11 (2002)</th>
+      <th>12 Angry Men (1957)</th>
+      <th>127 Hours (2010)</th>
+      <th>13 Going on 30 (2004)</th>
+      <th>...</th>
+      <th>Young Frankenstein (1974)</th>
+      <th>Z (1969)</th>
+      <th>Zack and Miri Make a Porno (2008)</th>
+      <th>Zelary (2003)</th>
+      <th>Zelig (1983)</th>
+      <th>Zero Dark Thirty (2012)</th>
+      <th>Zombieland (2009)</th>
+      <th>Zoolander (2001)</th>
+      <th>Zulu (1964)</th>
+      <th>eXistenZ (1999)</th>
+    </tr>
+    <tr>
+      <th>userId</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>18</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>9</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>606</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>607</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>608</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>6</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>609</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>610</th>
+      <td>24</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>18</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>610 rows × 1554 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#distance movies x users</span>
+<span class="n">distance_df_movies_users</span> <span class="o">=</span> <span class="n">get_dist_jaccard</span><span class="p">(</span><span class="n">movies_category_users</span><span class="p">)</span>
+<span class="n">distance_df_movies_users</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[38]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>userId</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>...</th>
+      <th>601</th>
+      <th>602</th>
+      <th>603</th>
+      <th>604</th>
+      <th>605</th>
+      <th>606</th>
+      <th>607</th>
+      <th>608</th>
+      <th>609</th>
+      <th>610</th>
+    </tr>
+    <tr>
+      <th>userId</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1.000000</td>
+      <td>0.007519</td>
+      <td>0.007812</td>
+      <td>0.151220</td>
+      <td>0.085106</td>
+      <td>0.112195</td>
+      <td>0.126374</td>
+      <td>0.094203</td>
+      <td>0.031496</td>
+      <td>0.032051</td>
+      <td>...</td>
+      <td>0.062500</td>
+      <td>0.116279</td>
+      <td>0.166667</td>
+      <td>0.053333</td>
+      <td>0.133333</td>
+      <td>0.119760</td>
+      <td>0.252874</td>
+      <td>0.231806</td>
+      <td>0.063492</td>
+      <td>0.107477</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.007519</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.007092</td>
+      <td>0.017241</td>
+      <td>0.007519</td>
+      <td>0.018349</td>
+      <td>0.017857</td>
+      <td>0.000000</td>
+      <td>0.080645</td>
+      <td>...</td>
+      <td>0.134146</td>
+      <td>0.010309</td>
+      <td>0.005263</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.010823</td>
+      <td>0.008130</td>
+      <td>0.011142</td>
+      <td>0.025641</td>
+      <td>0.041096</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.007812</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.007353</td>
+      <td>0.018868</td>
+      <td>0.023810</td>
+      <td>0.000000</td>
+      <td>0.019608</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.011494</td>
+      <td>0.021978</td>
+      <td>0.018919</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.013158</td>
+      <td>0.025862</td>
+      <td>0.017045</td>
+      <td>0.000000</td>
+      <td>0.005362</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.151220</td>
+      <td>0.007092</td>
+      <td>0.007353</td>
+      <td>1.000000</td>
+      <td>0.073333</td>
+      <td>0.082569</td>
+      <td>0.097938</td>
+      <td>0.060000</td>
+      <td>0.007246</td>
+      <td>0.043210</td>
+      <td>...</td>
+      <td>0.083333</td>
+      <td>0.086957</td>
+      <td>0.213033</td>
+      <td>0.044025</td>
+      <td>0.054726</td>
+      <td>0.142570</td>
+      <td>0.118812</td>
+      <td>0.125908</td>
+      <td>0.021583</td>
+      <td>0.095455</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.085106</td>
+      <td>0.017241</td>
+      <td>0.018868</td>
+      <td>0.073333</td>
+      <td>1.000000</td>
+      <td>0.254098</td>
+      <td>0.074380</td>
+      <td>0.288136</td>
+      <td>0.000000</td>
+      <td>0.036145</td>
+      <td>...</td>
+      <td>0.037037</td>
+      <td>0.300000</td>
+      <td>0.060847</td>
+      <td>0.220588</td>
+      <td>0.112069</td>
+      <td>0.042918</td>
+      <td>0.117188</td>
+      <td>0.076056</td>
+      <td>0.180000</td>
+      <td>0.031008</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>606</th>
+      <td>0.119760</td>
+      <td>0.010823</td>
+      <td>0.013158</td>
+      <td>0.142570</td>
+      <td>0.042918</td>
+      <td>0.083012</td>
+      <td>0.130252</td>
+      <td>0.043103</td>
+      <td>0.019780</td>
+      <td>0.053305</td>
+      <td>...</td>
+      <td>0.099366</td>
+      <td>0.071429</td>
+      <td>0.311183</td>
+      <td>0.035865</td>
+      <td>0.104938</td>
+      <td>1.000000</td>
+      <td>0.110887</td>
+      <td>0.261981</td>
+      <td>0.028634</td>
+      <td>0.208084</td>
+    </tr>
+    <tr>
+      <th>607</th>
+      <td>0.252874</td>
+      <td>0.008130</td>
+      <td>0.025862</td>
+      <td>0.118812</td>
+      <td>0.117188</td>
+      <td>0.123711</td>
+      <td>0.153846</td>
+      <td>0.110236</td>
+      <td>0.008333</td>
+      <td>0.027211</td>
+      <td>...</td>
+      <td>0.059880</td>
+      <td>0.137500</td>
+      <td>0.179747</td>
+      <td>0.072464</td>
+      <td>0.114943</td>
+      <td>0.110887</td>
+      <td>1.000000</td>
+      <td>0.208108</td>
+      <td>0.078261</td>
+      <td>0.107399</td>
+    </tr>
+    <tr>
+      <th>608</th>
+      <td>0.231806</td>
+      <td>0.011142</td>
+      <td>0.017045</td>
+      <td>0.125908</td>
+      <td>0.076056</td>
+      <td>0.142500</td>
+      <td>0.205556</td>
+      <td>0.091954</td>
+      <td>0.028571</td>
+      <td>0.054054</td>
+      <td>...</td>
+      <td>0.089005</td>
+      <td>0.125668</td>
+      <td>0.239016</td>
+      <td>0.077994</td>
+      <td>0.133508</td>
+      <td>0.261981</td>
+      <td>0.208108</td>
+      <td>1.000000</td>
+      <td>0.046110</td>
+      <td>0.301852</td>
+    </tr>
+    <tr>
+      <th>609</th>
+      <td>0.063492</td>
+      <td>0.025641</td>
+      <td>0.000000</td>
+      <td>0.021583</td>
+      <td>0.180000</td>
+      <td>0.135593</td>
+      <td>0.057143</td>
+      <td>0.266667</td>
+      <td>0.000000</td>
+      <td>0.030769</td>
+      <td>...</td>
+      <td>0.021978</td>
+      <td>0.195122</td>
+      <td>0.024129</td>
+      <td>0.163636</td>
+      <td>0.089109</td>
+      <td>0.028634</td>
+      <td>0.078261</td>
+      <td>0.046110</td>
+      <td>1.000000</td>
+      <td>0.024259</td>
+    </tr>
+    <tr>
+      <th>610</th>
+      <td>0.107477</td>
+      <td>0.041096</td>
+      <td>0.005362</td>
+      <td>0.095455</td>
+      <td>0.031008</td>
+      <td>0.048673</td>
+      <td>0.144670</td>
+      <td>0.039267</td>
+      <td>0.016173</td>
+      <td>0.076720</td>
+      <td>...</td>
+      <td>0.139474</td>
+      <td>0.055422</td>
+      <td>0.151515</td>
+      <td>0.025381</td>
+      <td>0.094891</td>
+      <td>0.208084</td>
+      <td>0.107399</td>
+      <td>0.301852</td>
+      <td>0.024259</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>610 rows × 610 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#top 5 similar users</span>
+<span class="n">target_user</span> <span class="o">=</span> <span class="mi">474</span>
+
+<span class="c1">#get recommendations based on users</span>
+<span class="n">similar_users</span> <span class="o">=</span> <span class="n">recommend_jaccard</span><span class="p">(</span><span class="n">distance_df_movies_users</span><span class="p">,</span> <span class="n">target_user</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="c1">#position 1 is the user</span>
+<span class="n">similar_users</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[43]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>userId
+599    0.414726
+606    0.320225
+288    0.313869
+68     0.302914
+387    0.299358
+Name: 474, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Copy to avoid losing main df</span>
+<span class="n">full_df_genres_target</span> <span class="o">=</span> <span class="n">full_df_genres</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1">#Filter target user only</span>
+<span class="n">full_df_genres_target</span> <span class="o">=</span> <span class="n">full_df_genres_target</span><span class="p">[</span><span class="n">full_df_genres_target</span><span class="p">[</span><span class="s1">&#39;userId&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">target_user</span><span class="p">]</span>
+
+<span class="c1">#lets use our function weight_votes to rank</span>
+<span class="n">user_avg_genres</span> <span class="o">=</span> <span class="n">weight_votes</span><span class="p">(</span><span class="n">full_df_genres_target</span><span class="p">,</span> <span class="s2">&quot;genres&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">user_avg_genres</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Numbers of votes to be in final list: 190.0
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[51]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vote_average</th>
+      <th>vote_count</th>
+      <th>score</th>
+    </tr>
+    <tr>
+      <th>genres</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Mystery</th>
+      <td>3.996078</td>
+      <td>255</td>
+      <td>3.923339</td>
+    </tr>
+    <tr>
+      <th>Sci-Fi</th>
+      <td>3.936782</td>
+      <td>348</td>
+      <td>3.897557</td>
+    </tr>
+    <tr>
+      <th>Thriller</th>
+      <td>3.891363</td>
+      <td>741</td>
+      <td>3.877965</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Predict Score to this list (top 5 users and 3 target_user genres)</span>
+<span class="n">filtered_df</span> <span class="o">=</span> <span class="n">full_df_genres</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1">#filter similar users</span>
+<span class="n">filtered_df</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="p">[</span><span class="n">filtered_df</span><span class="p">[</span><span class="s1">&#39;userId&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">similar_users</span><span class="o">.</span><span class="n">index</span><span class="p">)]</span>
+<span class="n">filtered_df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[55]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>movieId</th>
+      <th>title</th>
+      <th>genres</th>
+      <th>userId</th>
+      <th>rating</th>
+      <th>timestamp</th>
+      <th>tag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>69</th>
+      <td>1</td>
+      <td>Toy Story (1995)</td>
+      <td>Adventure</td>
+      <td>68</td>
+      <td>2.5</td>
+      <td>1158531426</td>
+      <td>pixar</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>1</td>
+      <td>Toy Story (1995)</td>
+      <td>Animation</td>
+      <td>68</td>
+      <td>2.5</td>
+      <td>1158531426</td>
+      <td>pixar</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>1</td>
+      <td>Toy Story (1995)</td>
+      <td>Children</td>
+      <td>68</td>
+      <td>2.5</td>
+      <td>1158531426</td>
+      <td>pixar</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>1</td>
+      <td>Toy Story (1995)</td>
+      <td>Comedy</td>
+      <td>68</td>
+      <td>2.5</td>
+      <td>1158531426</td>
+      <td>pixar</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>1</td>
+      <td>Toy Story (1995)</td>
+      <td>Fantasy</td>
+      <td>68</td>
+      <td>2.5</td>
+      <td>1158531426</td>
+      <td>pixar</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>233141</th>
+      <td>180031</td>
+      <td>The Shape of Water (2017)</td>
+      <td>Drama</td>
+      <td>599</td>
+      <td>3.5</td>
+      <td>1518298493</td>
+      <td>atmospheric</td>
+    </tr>
+    <tr>
+      <th>233141</th>
+      <td>180031</td>
+      <td>The Shape of Water (2017)</td>
+      <td>Fantasy</td>
+      <td>599</td>
+      <td>3.5</td>
+      <td>1518298493</td>
+      <td>atmospheric</td>
+    </tr>
+    <tr>
+      <th>233142</th>
+      <td>180031</td>
+      <td>The Shape of Water (2017)</td>
+      <td>Adventure</td>
+      <td>599</td>
+      <td>3.5</td>
+      <td>1518298493</td>
+      <td>dreamlike</td>
+    </tr>
+    <tr>
+      <th>233142</th>
+      <td>180031</td>
+      <td>The Shape of Water (2017)</td>
+      <td>Drama</td>
+      <td>599</td>
+      <td>3.5</td>
+      <td>1518298493</td>
+      <td>dreamlike</td>
+    </tr>
+    <tr>
+      <th>233142</th>
+      <td>180031</td>
+      <td>The Shape of Water (2017)</td>
+      <td>Fantasy</td>
+      <td>599</td>
+      <td>3.5</td>
+      <td>1518298493</td>
+      <td>dreamlike</td>
+    </tr>
+  </tbody>
+</table>
+<p>24027 rows × 7 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#filter target_user genres</span>
+<span class="n">filtered_df</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="p">[</span><span class="n">filtered_df</span><span class="p">[</span><span class="s1">&#39;genres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">user_avg_genres</span><span class="o">.</span><span class="n">index</span><span class="p">)]</span>
+<span class="n">filtered_df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[56]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>movieId</th>
+      <th>title</th>
+      <th>genres</th>
+      <th>userId</th>
+      <th>rating</th>
+      <th>timestamp</th>
+      <th>tag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1708</th>
+      <td>21</td>
+      <td>Get Shorty (1995)</td>
+      <td>Thriller</td>
+      <td>288</td>
+      <td>4.0</td>
+      <td>975693063</td>
+      <td>Hollywood</td>
+    </tr>
+    <tr>
+      <th>1751</th>
+      <td>21</td>
+      <td>Get Shorty (1995)</td>
+      <td>Thriller</td>
+      <td>599</td>
+      <td>4.0</td>
+      <td>1498499235</td>
+      <td>Hollywood</td>
+    </tr>
+    <tr>
+      <th>1926</th>
+      <td>29</td>
+      <td>City of Lost Children, The (Cité des enfants p...</td>
+      <td>Mystery</td>
+      <td>387</td>
+      <td>3.5</td>
+      <td>1094875272</td>
+      <td>kidnapping</td>
+    </tr>
+    <tr>
+      <th>1926</th>
+      <td>29</td>
+      <td>City of Lost Children, The (Cité des enfants p...</td>
+      <td>Sci-Fi</td>
+      <td>387</td>
+      <td>3.5</td>
+      <td>1094875272</td>
+      <td>kidnapping</td>
+    </tr>
+    <tr>
+      <th>1935</th>
+      <td>29</td>
+      <td>City of Lost Children, The (Cité des enfants p...</td>
+      <td>Mystery</td>
+      <td>599</td>
+      <td>3.5</td>
+      <td>1498500987</td>
+      <td>kidnapping</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>233100</th>
+      <td>176419</td>
+      <td>Mother! (2017)</td>
+      <td>Thriller</td>
+      <td>599</td>
+      <td>3.5</td>
+      <td>1516604655</td>
+      <td>allegorical</td>
+    </tr>
+    <tr>
+      <th>233101</th>
+      <td>176419</td>
+      <td>Mother! (2017)</td>
+      <td>Mystery</td>
+      <td>599</td>
+      <td>3.5</td>
+      <td>1516604655</td>
+      <td>uncomfortable</td>
+    </tr>
+    <tr>
+      <th>233101</th>
+      <td>176419</td>
+      <td>Mother! (2017)</td>
+      <td>Thriller</td>
+      <td>599</td>
+      <td>3.5</td>
+      <td>1516604655</td>
+      <td>uncomfortable</td>
+    </tr>
+    <tr>
+      <th>233102</th>
+      <td>176419</td>
+      <td>Mother! (2017)</td>
+      <td>Mystery</td>
+      <td>599</td>
+      <td>3.5</td>
+      <td>1516604655</td>
+      <td>unsettling</td>
+    </tr>
+    <tr>
+      <th>233102</th>
+      <td>176419</td>
+      <td>Mother! (2017)</td>
+      <td>Thriller</td>
+      <td>599</td>
+      <td>3.5</td>
+      <td>1516604655</td>
+      <td>unsettling</td>
+    </tr>
+  </tbody>
+</table>
+<p>5827 rows × 7 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#removed duplicates (dont need the other users ids anymore/neither genres)</span>
+<span class="n">filtered_df</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="s1">&#39;movieId&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">filtered_df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[64]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>movieId</th>
+      <th>title</th>
+      <th>genres</th>
+      <th>userId</th>
+      <th>rating</th>
+      <th>timestamp</th>
+      <th>tag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1708</td>
+      <td>21</td>
+      <td>Get Shorty (1995)</td>
+      <td>Thriller</td>
+      <td>288</td>
+      <td>4.0</td>
+      <td>975693063</td>
+      <td>Hollywood</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1926</td>
+      <td>29</td>
+      <td>City of Lost Children, The (Cité des enfants p...</td>
+      <td>Mystery</td>
+      <td>387</td>
+      <td>3.5</td>
+      <td>1094875272</td>
+      <td>kidnapping</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2836</td>
+      <td>32</td>
+      <td>Twelve Monkeys (a.k.a. 12 Monkeys) (1995)</td>
+      <td>Mystery</td>
+      <td>288</td>
+      <td>5.0</td>
+      <td>975692000</td>
+      <td>time travel</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5080</td>
+      <td>45</td>
+      <td>To Die For (1995)</td>
+      <td>Thriller</td>
+      <td>387</td>
+      <td>2.5</td>
+      <td>1094877493</td>
+      <td>Journalism</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5185</td>
+      <td>47</td>
+      <td>Seven (a.k.a. Se7en) (1995)</td>
+      <td>Mystery</td>
+      <td>68</td>
+      <td>4.0</td>
+      <td>1158531489</td>
+      <td>mystery</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>339</th>
+      <td>232751</td>
+      <td>168248</td>
+      <td>John Wick: Chapter Two (2017)</td>
+      <td>Thriller</td>
+      <td>599</td>
+      <td>3.0</td>
+      <td>1498529689</td>
+      <td>action</td>
+    </tr>
+    <tr>
+      <th>340</th>
+      <td>232787</td>
+      <td>168252</td>
+      <td>Logan (2017)</td>
+      <td>Sci-Fi</td>
+      <td>68</td>
+      <td>4.0</td>
+      <td>1526947535</td>
+      <td>dark</td>
+    </tr>
+    <tr>
+      <th>341</th>
+      <td>232947</td>
+      <td>174055</td>
+      <td>Dunkirk (2017)</td>
+      <td>Thriller</td>
+      <td>599</td>
+      <td>4.0</td>
+      <td>1501801164</td>
+      <td>brilliant</td>
+    </tr>
+    <tr>
+      <th>342</th>
+      <td>232977</td>
+      <td>176371</td>
+      <td>Blade Runner 2049 (2017)</td>
+      <td>Sci-Fi</td>
+      <td>68</td>
+      <td>3.5</td>
+      <td>1526947590</td>
+      <td>atmospheric</td>
+    </tr>
+    <tr>
+      <th>343</th>
+      <td>233100</td>
+      <td>176419</td>
+      <td>Mother! (2017)</td>
+      <td>Mystery</td>
+      <td>599</td>
+      <td>3.5</td>
+      <td>1516604655</td>
+      <td>allegorical</td>
+    </tr>
+  </tbody>
+</table>
+<p>344 rows × 8 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#using SVD to predict</span>
+
+<span class="c1">#predict scores for that movies and sort_by that</span>
+<span class="n">predictions2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">filtered_df</span><span class="p">[</span><span class="s1">&#39;movieId&#39;</span><span class="p">])):</span>
+    <span class="n">movie_id</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;movieId&quot;</span><span class="p">]</span>
+    <span class="n">pred</span> <span class="o">=</span> <span class="n">svd</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">target_user</span><span class="p">,</span> <span class="n">movie_id</span><span class="p">)</span><span class="o">.</span><span class="n">est</span> <span class="c1">#chose only the value of prediction!</span>
+    <span class="n">predictions2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pred</span><span class="p">)</span>
+
+<span class="c1">#create a new column with the predicitons</span>
+<span class="n">filtered_df</span><span class="p">[</span><span class="s1">&#39;pred&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">predictions2</span>
+<span class="n">filtered_df</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="p">[[</span><span class="s1">&#39;movieId&#39;</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;genres&quot;</span><span class="p">,</span> <span class="s2">&quot;tag&quot;</span><span class="p">,</span> <span class="s2">&quot;pred&quot;</span><span class="p">]]</span>
+
+<span class="c1">#order and return only 5 values!</span>
+<span class="n">filtered_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;pred&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[65]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>movieId</th>
+      <th>title</th>
+      <th>genres</th>
+      <th>tag</th>
+      <th>pred</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>161</th>
+      <td>2959</td>
+      <td>Fight Club (1999)</td>
+      <td>Thriller</td>
+      <td>dark comedy</td>
+      <td>4.152916</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>904</td>
+      <td>Rear Window (1954)</td>
+      <td>Mystery</td>
+      <td>voyeurism</td>
+      <td>4.144659</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>296</td>
+      <td>Pulp Fiction (1994)</td>
+      <td>Thriller</td>
+      <td>good dialogue</td>
+      <td>4.127133</td>
+    </tr>
+    <tr>
+      <th>284</th>
+      <td>48516</td>
+      <td>Departed, The (2006)</td>
+      <td>Thriller</td>
+      <td>way too long</td>
+      <td>4.115388</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>50</td>
+      <td>Usual Suspects, The (1995)</td>
+      <td>Mystery</td>
+      <td>mindfuck</td>
+      <td>4.113956</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16148,7 +17478,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filter by last date, and the most rated movies on that month!</span>
@@ -16180,7 +17510,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[36]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -16288,7 +17618,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -16329,7 +17659,71 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_trend_movies</span><span class="p">(</span><span class="n">df_time_converted</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; method to return trend, input = df_with timestamp to date (year and month) &quot;&quot;&quot;</span>
+    <span class="c1">#get last date</span>
+    <span class="n">last</span> <span class="o">=</span> <span class="n">df_time_converted</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">last</span> <span class="o">=</span> <span class="n">last</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="n">last</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;year&#39;</span><span class="p">]</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="n">last</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;month&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span>
+
+    <span class="c1">#chose the last 5 movies (inverse index!!!)</span>
+    <span class="n">last_df</span> <span class="o">=</span> <span class="n">df_time_converted</span><span class="p">[</span> <span class="p">(</span><span class="n">df_time_converted</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">year</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_time_converted</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">month</span><span class="p">)]</span>
+    <span class="n">list_names_trend</span> <span class="o">=</span> <span class="n">last_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)[</span><span class="s1">&#39;rating&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="n">list_names_trend</span>
+
+<span class="n">list_movies</span> <span class="o">=</span> <span class="n">get_trend_movies</span><span class="p">(</span><span class="n">full_df2</span><span class="p">)</span>
+<span class="n">list_movies</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>year 2018
+month 9
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Index([&#39;Goodfellas (1990)&#39;, &#39;Shawshank Redemption, The (1994)&#39;,
+       &#39;In Bruges (2008)&#39;, &#39;Dark Knight, The (2008)&#39;,
+       &#39;Burn After Reading (2008)&#39;],
+      dtype=&#39;object&#39;, name=&#39;title&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#maybe just rated movies by friends??</span>
@@ -16351,17 +17745,26 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-38-07430dd7ad8e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      2</span> friends <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span> <span class="ansi-cyan-intense-fg ansi-bold">474</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-cyan-intense-fg ansi-bold">17</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">      3</span> friends_df <span class="ansi-yellow-intense-fg ansi-bold">=</span> full_df2<span class="ansi-yellow-intense-fg ansi-bold">[</span>full_df2<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#34;userId&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>isin<span class="ansi-yellow-intense-fg ansi-bold">(</span>friends<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 4</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>get_trend_movies<span class="ansi-yellow-intense-fg ansi-bold">(</span>friends_df<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;get_trend_movies&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>year 2012
+month 1
+</pre>
 </div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Index([&#39;My Neighbor Totoro (Tonari no Totoro) (1988)&#39;, &#39;Taxi Driver (1976)&#39;,
+       &#39;Raging Bull (1980)&#39;],
+      dtype=&#39;object&#39;, name=&#39;title&#39;)</pre>
+</div>
+
 </div>
 
 </div>
@@ -16377,7 +17780,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Never watched genre... select most rated movies!</span>
@@ -16435,7 +17838,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#show genres never watched!</span>
@@ -16452,13 +17855,13 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&#39;Horror&#39;, &#39;Fantasy&#39;, &#39;Film-Noir&#39;, &#39;Sci-Fi&#39;, &#39;Western&#39;, &#39;(no genres listed)&#39;]</pre>
+<pre>[&#39;(no genres listed)&#39;, &#39;Sci-Fi&#39;, &#39;Film-Noir&#39;, &#39;Western&#39;, &#39;Horror&#39;, &#39;Fantasy&#39;]</pre>
 </div>
 
 </div>
@@ -16469,7 +17872,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#show list of movies of that genres!</span>
@@ -16486,7 +17889,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -16588,7 +17991,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#predict scores for that movies and sort_by that</span>
@@ -16616,7 +18019,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[42]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -16653,7 +18056,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
       <td>Shining, The (1980)</td>
       <td>Horror</td>
       <td>atmospheric</td>
-      <td>4.007975</td>
+      <td>4.008160</td>
     </tr>
     <tr>
       <th>0</th>
@@ -16661,7 +18064,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
       <td>Maltese Falcon, The (1941)</td>
       <td>Film-Noir</td>
       <td>statue</td>
-      <td>4.006448</td>
+      <td>4.006685</td>
     </tr>
     <tr>
       <th>1</th>
@@ -16669,7 +18072,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
       <td>Notorious (1946)</td>
       <td>Film-Noir</td>
       <td>assassination</td>
-      <td>3.996044</td>
+      <td>3.994357</td>
     </tr>
     <tr>
       <th>3</th>
@@ -16677,7 +18080,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
       <td>Third Man, The (1949)</td>
       <td>Film-Noir</td>
       <td>ferris wheel</td>
-      <td>3.943465</td>
+      <td>3.953664</td>
     </tr>
     <tr>
       <th>47</th>
@@ -16685,7 +18088,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
       <td>Interstellar (2014)</td>
       <td>Sci-Fi</td>
       <td>black hole</td>
-      <td>3.928294</td>
+      <td>3.928913</td>
     </tr>
   </tbody>
 </table>
@@ -16707,7 +18110,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Random filme generator (excluded watched movies!) !</span>
@@ -16737,7 +18140,7 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Try your lucky :)</span>
@@ -16745,6 +18148,31 @@ Select movies based on similarities of movies and genres, and use SVD to evaluat
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[34]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>movieId                      128360
+title      The Hateful Eight (2015)
+genres                      Western
+tag                      characters
+pred                          3.707
+Name: 48, dtype: object</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
